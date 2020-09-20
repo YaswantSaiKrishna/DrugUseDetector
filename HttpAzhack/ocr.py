@@ -8,8 +8,8 @@ import os
 def ocr1(img):
 
     #Cognitive Services endpoint and key
-    cog_key = '0711ffdc10034b05830516f60b88bc02'                     #Paste your primary key here
-    cog_endpoint = 'https://azhackocr.cognitiveservices.azure.com/'  #Paste your endpoint here
+    cog_key = '<Your Primary Key here>'                     #Paste your primary key here
+    cog_endpoint = '<Endpoint url here>'  #Paste your endpoint here
 
     # Get a client for the computer vision service
     computervision_client = ComputerVisionClient(cog_endpoint, CognitiveServicesCredentials(cog_key))

@@ -25,4 +25,5 @@ urllib3==1.25.10
 wasabi==0.8.0
 requests==2.24.0
 pyodbc==4.0.30
+googletrans==3.0.0
 https://med7.s3.eu-west-2.amazonaws.com/en_core_med7_lg.tar.gz

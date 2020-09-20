@@ -20,14 +20,14 @@ with pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+da
         cursor.execute(query)
         row = cursor.fetchone()
         while row:
-            eng_use = str(*row)
-            if sys.argv[2]:
-                try:
-                    translation = translator.translate(eng_use, dest=str(sys.argv[2]))
-                    print(f"English : {eng_use}")
-                    print(f"{sys.argv[2]} : {translation.text}")
-                except:
-                    print(f"Invalid language {eng_use}")
-            else:
+            try:
+                if sys.argv[2]:
+                    try:
+                        translation = translator.translate(eng_use, dest=str(sys.argv[2]))
+                        print(f"English : {eng_use}")
+                        print(f"{sys.argv[2]} : {translation.text}")
+                    except:
+                        print(f"Invalid language {eng_use}")
+            except:
                 print (eng_use)
             row = cursor.fetchone()

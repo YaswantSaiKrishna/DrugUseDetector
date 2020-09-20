@@ -15,6 +15,8 @@ def med7nlp1(text):
     if r == []:
         return None
 
+    
+    #Post Processing the extracted drug names to find out the drug with major content.
     n = len(r)
 
     res = []
